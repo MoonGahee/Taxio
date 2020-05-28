@@ -19,4 +19,26 @@
         <item name="android:text">@string/app_name</item>
     </style>
 
+    <style name="title1">
+        <item name="android:textSize">26sp</item>
+        <item name="android:layout_margin">5sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="title2">
+        <item name="android:textSize">22sp</item>
+        <item name="android:layout_margin">5sp</item>
+    </style>
+
+    <style name="attention">
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_margin">5sp</item>
+        <item name="android:textColor">#FF0000</item>
+    </style>
+    
+    <style name="basic">
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_margin">5sp</item>
+    </style>
+
 </resources>
