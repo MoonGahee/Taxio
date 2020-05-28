@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        bar = findViewById(R.id.bar);
+        bar = findViewById(R.id.abar);
         setSupportActionBar(bar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
