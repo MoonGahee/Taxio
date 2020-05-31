@@ -71,7 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cal"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:background="@color/tButton"
+        android:background="@drawable/button_long"
         android:text="확인"
         style="@style/basic"/>
 
