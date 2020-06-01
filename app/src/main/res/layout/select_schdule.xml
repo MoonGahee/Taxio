@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/title"/>
-    </androidx.appcompat.widget.Toolbar>//툴바
+    </androidx.appcompat.widget.Toolbar><!-- 툴바 -->
     <TextView
         android:id="@+id/Name"
         app:layout_constraintLeft_toLeftOf="parent"
