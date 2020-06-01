@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/abar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        style="@style/back">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/title"/>
+    </androidx.appcompat.widget.Toolbar> <!-- 툴바 -->
+
+    <TextView
+        android:id="@+id/recommendTrip1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/abar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="추천 여행지"
+        style="@style/title1"
+        />
+
+    <TextView
+        android:id="@+id/recommendTrip2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/recommendTrip1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        style="@style/title2"
+        android:text="원하는 추천 장소들을 선택해주세요."
+        />
+    <TextView
+        android:id="@+id/recommendAttention"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/recommendTrip2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        style="@style/attention"
+        android:text="장소 순서는 임의로 선정됩니다."
+        />
+
+    <TextView
+        android:id="@+id/msg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recommendAttention"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="30dp"
+        android:text="원하시는 여행지가 없으신가요?\n새로운 장소를 소개시켜드릴게요."
+        style="@style/basic"
+        />
+
+    <Button
+        android:id="@+id/btnReturn"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recommendAttention"
+        android:layout_marginTop="250dp"
+        android:layout_marginRight="30dp"
+        android:text="다시 찾기"
+        android:background="@drawable/button_short"
+        />
+
+    <Button
+        android:id="@+id/select_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/msg1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="210dp"
+        android:text="선택 완료"
+        android:background="@drawable/button_long"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

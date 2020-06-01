@@ -19,13 +19,13 @@
             style="@style/title"/>
     </androidx.appcompat.widget.Toolbar><!-- 툴바 -->
     <TextView
-        android:id="@+id/Name"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/abar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="일정 선택"
-        style="@style/title1"/>
+    android:id="@+id/Name"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/abar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="일정 선택"
+    style="@style/title1"/>
     <TextView
         android:id="@+id/warn"
         android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/weather"
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="출발일과 도착일을 선택해주세요"
-        style="@style/basic"/>
+        style="@style/title2"/>
     <CalendarView
         android:id="@+id/cal"
         android:layout_width="wrap_content"
