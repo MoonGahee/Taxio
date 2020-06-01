@@ -45,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@id/warn"
         android:background="@color/tButton">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>//날씨
     <TextView
         android:id="@+id/select"
         android:layout_width="wrap_content"
