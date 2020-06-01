@@ -21,6 +21,78 @@
             android:layout_height="wrap_content"
             style="@style/title"/>
     </androidx.appcompat.widget.Toolbar>
+    <!--위에는 툴바-->
 
+    <TextView
+        android:id="@+id/comingTripTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/abar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="앞으로의 일정"
+        style="@style/title1"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/weather"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/comingTripTitle"
+        android:background="@color/tButton">
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/comingTrip"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weather"
+        android:background="@color/tButton">
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/newTripBtn"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/comingTrip"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/button_long"
+        android:text="새로운 여행 만들기"
+        style="@style/basic"/>
+
+    <TextView
+        android:id="@+id/recruitState"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newTripBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="나의 요청 현황"
+        style="@style/title1"/>
+
+    <TextView
+        android:id="@+id/recruitCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/recruitState"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="총 3건의 요청이 있습니다."
+        style="@style/title2"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recruitList"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recruitCount"
+        android:background="@color/tButton">
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
