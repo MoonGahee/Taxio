@@ -130,13 +130,23 @@
         android:max="5" />
 
     <Button
-        android:id="@+id/update_finish"
+        android:id="@+id/trip_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/trip"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:text="변경완료"
+        android:text="일정 편집"
         android:background="@color/tButton"
         android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/taxi_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/trip"
+        app:layout_constraintLeft_toRightOf="@+id/trip_edit"
+        android:background="@color/tButton"
+        android:layout_margin="10dp"
+        android:text="TAXI"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
