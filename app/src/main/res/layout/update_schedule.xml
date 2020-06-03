@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/map"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:text="< 전 날"
+        android:text=" 전 날"
         android:background="@drawable/button_short"
         android:layout_margin="10dp" /><!-- 전 날 이동 버튼 -->
 

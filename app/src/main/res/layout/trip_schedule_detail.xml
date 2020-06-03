@@ -6,19 +6,19 @@
     android:layout_height="match_parent"
     android:background="#ffffff">
 
-<androidx.appcompat.widget.Toolbar
-android:id="@+id/abar"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-app:layout_constraintTop_toTopOf="parent"
-app:layout_constraintLeft_toLeftOf="parent"
-style="@style/back">
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    style="@style/title"/>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/abar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        style="@style/back">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/title"/>
 
-</androidx.appcompat.widget.Toolbar> <!-- 툴바 -->
+    </androidx.appcompat.widget.Toolbar> <!-- 툴바 -->
 
     <TextView
         android:id="@+id/recruitDriver1"
@@ -39,6 +39,7 @@ style="@style/back">
         style="@style/title2"
         android:text="나의 여행 정보를 확인하세요."
         />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
