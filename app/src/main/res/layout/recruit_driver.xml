@@ -51,6 +51,18 @@
         />
 
     <TextView
+        android:id="@+id/infoPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/recruitDriver2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="250dp"
+        style="@style/basic"
+        android:text="인승"
+        />
+
+    <TextView
         android:id="@+id/infoGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -84,7 +96,7 @@
         />
 
     <TextView
-        android:id="@+id/date"
+        android:id="@+id/tripdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/recruitDriver2"
@@ -92,7 +104,21 @@
         android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
         style="@style/basic"
+        android:textStyle="bold"
         android:text="2020년 8월 28일"
+        />
+
+    <TextView
+        android:id="@+id/tripPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/recruitDriver2"
+        app:layout_constraintLeft_toLeftOf="@id/infoDate"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="20dp"
+        style="@style/basic"
+        android:textStyle="bold"
+        android:text="4명"
         />
 
     <RadioGroup
@@ -211,4 +237,11 @@
         android:text="총 1분의 기사님이 기다리고 계십니다."
         />
 
+    <fragment
+        android:id="@+id/recruitDriverF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="400dp"
+        android:background="@color/tButton"
+        /> <!--background 적용 유무 모름-->
 </androidx.constraintlayout.widget.ConstraintLayout>

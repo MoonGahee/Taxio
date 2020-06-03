@@ -6,17 +6,18 @@
     android:layout_height="match_parent"
     android:background="#ffffff">
 
-<androidx.appcompat.widget.Toolbar
-android:id="@+id/abar"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-app:layout_constraintTop_toTopOf="parent"
-app:layout_constraintLeft_toLeftOf="parent"
-style="@style/back">
-    <TextView
-    android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+    android:id="@+id/abar"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    style="@style/title"/>
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    style="@style/back">
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/title"/>
 
 </androidx.appcompat.widget.Toolbar> <!-- 툴바 -->
 
