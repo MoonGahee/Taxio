@@ -17,7 +17,7 @@ public class CheckSchedule extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.check_schdule);
 
-        edit_btn = findViewById(R.id.trip_edit);
+        edit_btn = findViewById(R.id.trip_edit1);
 
         edit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
