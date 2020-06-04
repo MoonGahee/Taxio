@@ -24,7 +24,7 @@ public class UpdateSchedule extends AppCompatActivity {
         finish_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(UpdateSchedule.this);
                 builder.setTitle("일정 확인");
                 builder.setMessage("이대로 일정을 마무리하겠습니까?");
                 builder.setPositiveButton("네", new DialogInterface.OnClickListener() {
