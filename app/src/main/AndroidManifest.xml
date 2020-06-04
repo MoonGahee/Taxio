@@ -16,6 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".NewScheduleRegion" android:label="지역선택하기"/>
     </application>
 
 </manifest>
