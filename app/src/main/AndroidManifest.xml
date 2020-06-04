@@ -16,6 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CheckSchedule" />
+        <activity android:name=".UpdateSchedule" />
+        <activity android:name=".RecommendTrip" />
+        <activity android:name=".RecruitDriver" />
+        <activity android:name=".TripSchedule" />
+        <activity android:name=".TripScheduleDetail" />
         <activity android:name=".NewScheduleRegion" android:label="지역선택하기"/>
     </application>
 
