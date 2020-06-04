@@ -82,5 +82,5 @@
         android:text="확인"
         style="@style/basic"
         android:layout_margin="30dp"
-        android:background="@color/tButton"
+        android:background="@color/tButton"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
