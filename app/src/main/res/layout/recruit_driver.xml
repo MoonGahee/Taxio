@@ -59,7 +59,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="250dp"
         style="@style/basic"
-        android:text="인승"
+        android:text="인원"
         />
 
     <TextView
@@ -243,5 +243,5 @@
         android:layout_height="match_parent"
         android:layout_marginTop="400dp"
         android:background="@color/tButton"
-        /> <!--background 적용 유무 모름-->
+    /> <!--background 적용 유무 모름-->
 </androidx.constraintlayout.widget.ConstraintLayout>
