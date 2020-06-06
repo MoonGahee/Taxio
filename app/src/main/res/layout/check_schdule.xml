@@ -20,7 +20,7 @@
     </androidx.appcompat.widget.Toolbar><!-- 툴바 -->
 
     <TextView
-        android:id="@+id/intro"
+        android:id="@+id/intro1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/abar"
@@ -29,47 +29,47 @@
         style="@style/title1"/>
 
     <TextView
-        android:id="@+id/date"
+        android:id="@+id/date1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/intro"
+        app:layout_constraintTop_toBottomOf="@+id/intro1"
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="2020.08.28~08.31"
         style="@style/title2"/>
 
     <TextView
-        android:id="@+id/people"
+        android:id="@+id/people1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/intro"
-        app:layout_constraintLeft_toRightOf="@+id/date"
+        app:layout_constraintTop_toBottomOf="@+id/intro1"
+        app:layout_constraintLeft_toRightOf="@+id/date1"
         android:text="3명"
         style="@style/title2"/>
 
     <AutoCompleteTextView
-        android:id="@+id/search"
+        android:id="@+id/search1"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        app:layout_constraintTop_toBottomOf="@+id/date"
+        app:layout_constraintTop_toBottomOf="@+id/date1"
         app:layout_constraintLeft_toLeftOf="parent"
         android:completionHint="장소를 입력해주세요."
         android:completionThreshold="1"
         android:background="@drawable/search_blank"/>
 
     <Button
-        android:id="@+id/search_button"
+        android:id="@+id/search_button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/date"
-        app:layout_constraintLeft_toRightOf="@+id/search"
+        app:layout_constraintTop_toBottomOf="@+id/date1"
+        app:layout_constraintLeft_toRightOf="@+id/search1"
         android:text="검색"
         style="@style/basic"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/map"
+        android:id="@+id/map1"
         android:layout_width="wrap_content"
         android:layout_height="100dp"
-        app:layout_constraintTop_toBottomOf="@id/search"
+        app:layout_constraintTop_toBottomOf="@id/search1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:background="@color/tButton">
@@ -77,73 +77,73 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/previous"
+        android:id="@+id/previous1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/map"
+        app:layout_constraintTop_toBottomOf="@+id/map1"
         app:layout_constraintLeft_toLeftOf="parent"
         android:text=" 전 날"
         android:background="@drawable/button_short"
         android:layout_margin="10dp" />
 
     <TextView
-        android:id="@+id/day"
+        android:id="@+id/day1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/map"
-        app:layout_constraintLeft_toRightOf="@+id/previous"
+        app:layout_constraintTop_toBottomOf="@+id/map1"
+        app:layout_constraintLeft_toRightOf="@+id/previous1"
         android:text="2일차"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         style="@style/title2"/>
 
     <Button
-        android:id="@+id/recommend"
+        android:id="@+id/recommend1"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        app:layout_constraintTop_toBottomOf="@+id/map"
-        app:layout_constraintLeft_toRightOf="@+id/day"
+        app:layout_constraintTop_toBottomOf="@+id/map1"
+        app:layout_constraintLeft_toRightOf="@+id/day1"
         android:text="추천"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
         android:background="@color/tButton"/>
 
     <Button
-        android:id="@+id/next"
+        android:id="@+id/next1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/map"
-        app:layout_constraintLeft_toRightOf="@+id/recommend"
+        app:layout_constraintTop_toBottomOf="@+id/map1"
+        app:layout_constraintLeft_toRightOf="@+id/recommend1"
         android:layout_margin="10dp"
         android:text="다음 날 >"
         android:background="@drawable/button_short"/>
 
     <SeekBar
-        android:id="@+id/trip"
+        android:id="@+id/trip1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
-        app:layout_constraintTop_toBottomOf="@+id/day"
+        app:layout_constraintTop_toBottomOf="@+id/day1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:max="5" />
 
     <Button
-        android:id="@+id/trip_edit"
+        android:id="@+id/trip_edit1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/trip"
+        app:layout_constraintTop_toBottomOf="@+id/trip1"
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="일정 편집"
         android:background="@color/tButton"
         android:layout_margin="10dp"/>
 
     <Button
-        android:id="@+id/taxi_btn"
+        android:id="@+id/taxi_btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/trip"
-        app:layout_constraintLeft_toRightOf="@+id/trip_edit"
+        app:layout_constraintTop_toBottomOf="@+id/trip1"
+        app:layout_constraintLeft_toRightOf="@+id/trip_edit1"
         android:background="@color/tButton"
         android:layout_margin="10dp"
         android:text="TAXI"/>

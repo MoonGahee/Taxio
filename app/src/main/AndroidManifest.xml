@@ -22,6 +22,7 @@
         <activity android:name=".RecruitDriver" />
         <activity android:name=".TripSchedule" />
         <activity android:name=".TripScheduleDetail" />
+        <activity android:name=".NewScheduleRegion" android:label="지역선택하기"/>
     </application>
 
 </manifest>
