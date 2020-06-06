@@ -168,7 +168,6 @@
         app:layout_constraintLeft_toRightOf="@+id/cancel_btn"
         android:text="후기 등록"
         android:layout_margin="20dp"
-        android:background="@color/tButton"
-        />
+        android:background="@color/tButton"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
