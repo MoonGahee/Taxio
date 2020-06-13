@@ -12,7 +12,7 @@
     </style>
     <style name="title">
         <item name="android:gravity">center</item>
-        <item name="android:textSize">40sp</item>
+        <item name="android:textSize">36sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:textColor">#FFFFFF</item>

@@ -19,7 +19,7 @@ public class UpdateSchedule extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.update_schedule);
 
-        finish_btn = findViewById(R.id.update_finish);
+        finish_btn = findViewById(R.id.update_finish2);
 
         finish_btn.setOnClickListener(new View.OnClickListener() {
             @Override
