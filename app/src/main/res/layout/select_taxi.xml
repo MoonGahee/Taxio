@@ -72,7 +72,7 @@
         style="@style/basic"
         android:text="출발시간"
  />
-    <
+    <Recycle
 
     <Button
         android:id="@+id/ok"
