@@ -30,6 +30,8 @@
         <activity android:name=".TripSchedule" />
         <activity android:name=".TripScheduleDetail" />
         <activity android:name=".NewScheduleRegion" android:label="지역선택하기"/>
+        <activity android:name=".CheckEpilogue"/>
+        <activity android:name=".Epilogue"/>
     </application>
 
 </manifest>
