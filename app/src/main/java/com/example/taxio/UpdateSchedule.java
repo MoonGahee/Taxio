@@ -3,8 +3,10 @@ package com.example.taxio;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -12,10 +14,13 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.github.vipulasri.timelineview.TimelineView;
+
 public class UpdateSchedule extends AppCompatActivity {
 
     Button finish_btn;
     Toolbar toolbar;
+    TimelineView trip2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,6 +28,7 @@ public class UpdateSchedule extends AppCompatActivity {
         setContentView(R.layout.update_schedule);
 
         finish_btn = findViewById(R.id.update_finish2);
+        trip2 = findViewById(R.id.trip2);
 
         toolbar = (Toolbar)findViewById(R.id.abar); // 툴바를 액티비티의 앱바로 지정
         setSupportActionBar(toolbar); //툴바를 현재 액션바로 설정
@@ -52,5 +58,29 @@ public class UpdateSchedule extends AppCompatActivity {
                 builder.show();
             }
         });
+
+        trip2.findViewById(R.id.trip2);
+        //trip2.initLine();
+    }
+
+    public void goMain(ImageView logo){//로고버튼 클릭시
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(UpdateSchedule.this, MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {//toolbar의 back키 눌렀을 시
+        switch (item.getItemId()){
+            case android.R.id.home:{//이전 화면으로 돌아감
+                finish();
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
