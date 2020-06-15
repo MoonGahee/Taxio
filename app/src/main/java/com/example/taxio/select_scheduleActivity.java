@@ -1,6 +1,8 @@
 package com.example.taxio;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.TextView;
@@ -8,7 +10,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import java.util.Calendar;
 import java.util.Date;
 
@@ -26,7 +27,17 @@ public class select_scheduleActivity extends AppCompatActivity {
         cal = findViewById(R.id.cal);
         myCal = Calendar.getInstance();
 
+
+
         cal.setMinDate(myCal.getTimeInMillis());//최소선택날은 오늘
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(select_scheduleActivity.this, select_taxiActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
     }
 
