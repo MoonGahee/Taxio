@@ -46,7 +46,7 @@
             android:layout_height="match_parent"
             app:layout_constraintTop_toBottomOf="@id/abar"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:src="@drawable/koreamap"/>
+            android:src="@drawable/koreaMap"/>
     <!--class="com.google.android.gms.maps.MapFragment"-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
