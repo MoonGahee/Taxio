@@ -10,6 +10,10 @@ import android.widget.TextView;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+
 import java.util.Calendar;
 import java.util.Date;
 
@@ -27,8 +31,8 @@ public class select_scheduleActivity extends AppCompatActivity {
         cal = findViewById(R.id.cal);
         myCal = Calendar.getInstance();
 
-
-
+        cal.setOnDateChangeListener((CalendarView.OnDateChangeListener) this);
+        
         cal.setMinDate(myCal.getTimeInMillis());//최소선택날은 오늘
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +44,11 @@ public class select_scheduleActivity extends AppCompatActivity {
         });
 
     }
+    public void onDateSelected(MaterialCalendarView c, CalendarDay d, boolean s){
+
+    }
+
+    public void onMonthChanged(MaterialCalendarView c, CalendarDay d){}
 
     public void setToolbar(){
         Toolbar toolbar = (Toolbar)findViewById(R.id.abar); // 툴바를 액티비티의 앱바로 지정

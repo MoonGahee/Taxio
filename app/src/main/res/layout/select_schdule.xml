@@ -57,7 +57,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="출발일과 도착일을 선택해주세요"
         style="@style/title2"/>
-    <CalendarView
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
         android:id="@+id/cal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
