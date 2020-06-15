@@ -236,7 +236,7 @@
             android:id="@+id/recruitPlc2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="상창농장 - 용담해변(총 2명)"
+            android:text="상창농장 - 용담해변(총 3명)"
             android:textColor="#000000"
             android:textSize="17sp"
             android:layout_marginTop="5dp"
