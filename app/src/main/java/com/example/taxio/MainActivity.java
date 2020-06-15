@@ -13,8 +13,6 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar;
-    Button newTripBtn;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setDisplayShowTitleEnabled(false); //액션바의 타이틀 삭제
         actionBar.setDisplayHomeAsUpEnabled(true); //홈으로 가기 버튼 활성화
 
+        Button newTripBtn;
         newTripBtn = findViewById(R.id.newTripBtn);
 
         newTripBtn.setOnClickListener(new View.OnClickListener() {
@@ -32,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, NewScheduleRegion.class);
                 startActivity(intent);
-                finish();
             }
         });
 
