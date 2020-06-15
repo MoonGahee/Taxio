@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,240 +7,238 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/abar"
+        style="@style/back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        style="@style/back">
+        app:layout_constraintTop_toTopOf="parent">
+
         <TextView
+            style="@style/title"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/title"/>
+            android:layout_height="wrap_content" />
     </androidx.appcompat.widget.Toolbar> <!-- 툴바 -->
 
     <TextView
         android:id="@+id/recruitDriver1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/abar"
+        style="@style/title1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="기사 정보 선택"
-        style="@style/title1"
-        />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/abar" />
 
     <TextView
         android:id="@+id/recruitDriver2"
+        style="@style/title2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/recruitDriver1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        style="@style/title2"
         android:text="원하는 조건을 선택해주세요."
-        />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recruitDriver1" />
 
     <TextView
         android:id="@+id/infoDate"
+        style="@style/basic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/recruitDriver2"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="20dp"
-        style="@style/basic"
         android:text="날짜"
-        />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recruitDriver2" />
 
     <TextView
         android:id="@+id/infoPeople"
+        style="@style/basic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/recruitDriver2"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="250dp"
-        style="@style/basic"
+        android:layout_marginTop="20dp"
         android:text="인원"
-        />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recruitDriver2" />
 
     <TextView
         android:id="@+id/infoGender"
+        style="@style/basic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/infoDate"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="15dp"
-        style="@style/basic"
         android:text="성별"
-        />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoDate" />
 
     <TextView
         android:id="@+id/infoTrunk"
+        style="@style/basic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/infoGender"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="15dp"
-        style="@style/basic"
         android:text="트렁크"
-        />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoGender" />
 
     <TextView
         android:id="@+id/infoPerson"
+        style="@style/basic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/infoTrunk"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="15dp"
-        style="@style/basic"
         android:text="인승"
-        />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoTrunk" />
 
     <TextView
         android:id="@+id/tripdate"
+        style="@style/basic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/recruitDriver2"
-        app:layout_constraintLeft_toLeftOf="@id/infoDate"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
-        style="@style/basic"
-        android:textStyle="bold"
         android:text="2020년 8월 28일"
-        />
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/infoDate"
+        app:layout_constraintTop_toBottomOf="@+id/recruitDriver2" />
 
     <TextView
         android:id="@+id/tripPerson"
+        style="@style/basic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/recruitDriver2"
-        app:layout_constraintLeft_toLeftOf="@id/infoDate"
         android:layout_marginLeft="280dp"
         android:layout_marginTop="20dp"
-        style="@style/basic"
-        android:textStyle="bold"
         android:text="4명"
-        />
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/infoDate"
+        app:layout_constraintTop_toBottomOf="@+id/recruitDriver2" />
 
     <RadioGroup
         android:id="@+id/rg1"
+        style="@style/basic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/recruitDriver2"
+        android:orientation="horizontal"
         app:layout_constraintLeft_toLeftOf="@+id/infoGender"
-        style="@style/basic"
-        android:orientation="horizontal"> <!--원래는 vertical 기본인가?-->
+        app:layout_constraintTop_toBottomOf="@+id/recruitDriver2"> <!--원래는 vertical 기본인가?-->
         <RadioButton
             android:id="@+id/noGender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="25dp"
-            android:text="무관"/>
+            android:text="무관" />
+
         <RadioButton
             android:id="@+id/manDriver"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="25dp"
-            android:text="남성"/>
+            android:text="남성" />
+
         <RadioButton
             android:id="@+id/womanDriver"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="25dp"
-            android:text="여성"/>
+            android:text="여성" />
     </RadioGroup>
 
     <RadioGroup
-    android:id="@+id/rg2"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:layout_constraintTop_toBottomOf="@+id/rg1"
-    app:layout_constraintLeft_toLeftOf="@+id/infoTrunk"
-    style="@style/basic"
-    android:orientation="horizontal"> <!--원래는 vertical 기본인가?-->
-    <RadioButton
-        android:id="@+id/allTrunk"
+        android:id="@+id/rg2"
+        style="@style/basic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="5dp"
-        android:text="전체"/>
-    <RadioButton
-        android:id="@+id/yesTrunk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="5dp"
-        android:text="유"/>
-    <RadioButton
-        android:id="@+id/noTrunk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="5dp"
-        android:text="무"/>
-</RadioGroup>
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/infoTrunk"
+        app:layout_constraintTop_toBottomOf="@+id/rg1"> <!--원래는 vertical 기본인가?-->
+        <RadioButton
+            android:id="@+id/allTrunk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:text="전체" />
+
+        <RadioButton
+            android:id="@+id/yesTrunk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:text="유" />
+
+        <RadioButton
+            android:id="@+id/noTrunk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:text="무" />
+    </RadioGroup>
 
     <RadioGroup
         android:id="@+id/rg3"
+        style="@style/basic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/rg2"
+        android:orientation="horizontal"
         app:layout_constraintLeft_toLeftOf="@+id/infoPerson"
-        style="@style/basic"
-        android:orientation="horizontal"> <!--원래는 vertical 기본인가?-->
+        app:layout_constraintTop_toBottomOf="@+id/rg2"> <!--원래는 vertical 기본인가?-->
         <RadioButton
             android:id="@+id/under4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="5dp"
-            android:text="4인 이하"/>
+            android:text="4인 이하" />
+
         <RadioButton
             android:id="@+id/under6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
-            android:text="6인 이하"/>
+            android:text="6인 이하" />
+
         <RadioButton
             android:id="@+id/over6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
-            android:text="6인 초과"/>
+            android:text="6인 초과" />
     </RadioGroup>
 
     <Button
         android:id="@+id/search_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/infoPerson"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_long_trip"
+        android:text="조회"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="20dp"
-        android:text="조회"
-        android:background="@drawable/button_long_trip"
-        />
+        app:layout_constraintTop_toBottomOf="@id/infoPerson" />
 
     <TextView
+        android:id="@+id/search_result"
+        style="@style/basic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/search_btn"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
-        style="@style/basic"
+        android:layout_marginTop="10dp"
         android:text="총 1분의 기사님이 기다리고 계십니다."
-        />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_btn" />
 
-    <fragment
-        android:id="@+id/recruitDriverF"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="400dp"
-        android:background="@color/tButton"
-    /> <!--background 적용 유무 모름-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_result"
+        android:layout_marginBottom="20dp"
+        android:background="@color/tButton"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

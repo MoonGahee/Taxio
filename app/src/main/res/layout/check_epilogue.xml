@@ -98,7 +98,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/driver1"
             app:layout_constraintLeft_toRightOf="@+id/image1"
-            android:text=".........................."
+            android:text="@string/line"
             style="@style/basic"/>
 
         <TextView
@@ -155,7 +155,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/driver2"
             app:layout_constraintLeft_toRightOf="@+id/image2"
-            android:text=".........................."
+            android:text="@string/line"
             style="@style/basic"/>
 
         <TextView
@@ -208,12 +208,12 @@
 
         <TextView
             android:id="@+id/distinction3"
+            style="@style/basic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/driver3"
+            android:text="@string/line"
             app:layout_constraintLeft_toRightOf="@+id/image3"
-            android:text=".........................."
-            style="@style/basic"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/reivews3"
@@ -270,7 +270,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/driver4"
             app:layout_constraintLeft_toRightOf="@+id/image4"
-            android:text=".........................."
+            android:text="@string/line"
             style="@style/basic"/>
 
         <TextView

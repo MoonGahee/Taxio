@@ -39,16 +39,6 @@ public class RecruitDriver extends AppCompatActivity {
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder dlg1 = new AlertDialog.Builder(RecruitDriver.this);
-                dlg1.setTitle("기사 모집");
-                dlg1.setMessage("원하시는 조건의 기사님이 없습니다.\n모집을 시작하겠습니까?");
-                dlg1.setPositiveButton("예", null);
-                dlg1.setNegativeButton("아니요", null);
-
-                AlertDialog.Builder dlg2 = new AlertDialog.Builder(RecruitDriver.this);
-                dlg1.setTitle("모집 신청");
-                dlg1.setMessage("신청이 완료되었습니다.");
-                dlg1.setPositiveButton("예", null);
             }
         });
     }
