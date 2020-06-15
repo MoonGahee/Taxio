@@ -41,32 +41,33 @@
         />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/listD1"
-    android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:layout_margin="10dp"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/selectDriver2"
-    android:background="@color/tButton">
+        android:id="@+id/listD1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:background="@color/tButton"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectDriver2">
 
         <Button
             android:id="@+id/btnS1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Send Message"
             app:layout_constraintBottom_toBottomOf="@id/listD1"
-            app:layout_constraintRight_toRightOf="@id/listD1"
-            android:text="Send Message"/>
+            app:layout_constraintRight_toRightOf="@id/listD1" />
 
         <Button
             android:id="@+id/btnR1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="요청"
             app:layout_constraintBottom_toBottomOf="@id/listD1"
-            app:layout_constraintRight_toLeftOf="@id/btnS1"
-            android:text="요청"/>
+            app:layout_constraintRight_toLeftOf="@id/btnS1" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/listD2"

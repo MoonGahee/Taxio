@@ -1,35 +1,43 @@
 package com.example.taxio;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CalendarView;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import java.util.Calendar;
+import java.util.Date;
 
+public class select_scheduleActivity extends AppCompatActivity {
+    Button ok;
+    CalendarView cal;
+    Calendar myCal, start, finish;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setToolbar();
 
-        Button newTripBtn;
-        newTripBtn = findViewById(R.id.newTripBtn);
+        ok = findViewById(R.id.ok);
+        cal = findViewById(R.id.cal);
+        myCal = Calendar.getInstance();
 
-        newTripBtn.setOnClickListener(new View.OnClickListener() {
+
+
+        cal.setMinDate(myCal.getTimeInMillis());//최소선택날은 오늘
+        ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, NewScheduleRegion.class);
-                startActivity(intent);
+                Intent i = new Intent(select_scheduleActivity.this, select_taxiActivity.class);
+                startActivity(i);
+                finish();
             }
         });
-
 
     }
 
@@ -40,4 +48,5 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setDisplayShowTitleEnabled(false); //액션바의 타이틀 삭제
         actionBar.setDisplayHomeAsUpEnabled(true); //홈으로 가기 버튼 활성화
     }
+
 }
