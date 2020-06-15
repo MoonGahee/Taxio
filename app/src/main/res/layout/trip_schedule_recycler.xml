@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#E4E4E4"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tripSchedule"
+        style="@style/basic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/tripPosition"
+        style="@style/basic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textColor="#FF2F2F"
+        android:textStyle="bold" />
+</RelativeLayout>
