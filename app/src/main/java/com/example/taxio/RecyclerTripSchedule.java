@@ -5,10 +5,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class RecyclerTripSchedule extends RecyclerView.Adapter<RecyclerTripSchedule.ItemViewHolder> {
+/*public class RecyclerTripSchedule extends RecyclerView.Adapter<RecyclerTripSchedule.ItemViewHolder> {
     private ArrayList<String> tData = null;
     private ArrayList<String> pData = null;
     Context context;
 
 
-}
+}*/
