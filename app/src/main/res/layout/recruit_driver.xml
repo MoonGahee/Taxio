@@ -13,13 +13,13 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        style="@style/back">
+        >
         <TextView
             style="@style/title"
             android:id="@+id/title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/title"/>
+         />
     </androidx.appcompat.widget.Toolbar> <!-- 툴바 -->
 
     <TextView
@@ -34,7 +34,7 @@
 
     <TextView
         android:id="@+id/recruitDriver2"
-        style="@style/title2"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/recruitDriver1"
@@ -45,7 +45,7 @@
 
     <TextView
         android:id="@+id/infoDate"
-        style="@style/basic"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/recruitDriver2"
@@ -57,7 +57,7 @@
 
     <TextView
         android:id="@+id/infoPeople"
-        style="@style/basic"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/recruitDriver2"
@@ -70,7 +70,7 @@
 
     <TextView
         android:id="@+id/infoGender"
-        style="@style/basic"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/infoDate"
@@ -88,13 +88,13 @@
         app:layout_constraintTop_toBottomOf="@+id/infoGender"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="15dp"
-        style="@style/basic"
+
         android:text="트렁크"
         />
 
     <TextView
         android:id="@+id/infoPerson"
-        style="@style/basic"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/infoTrunk"
@@ -113,26 +113,23 @@
         app:layout_constraintLeft_toLeftOf="@id/infoDate"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
-        style="@style/basic"
+
         android:textStyle="bold"
         android:text="2020년 8월 28일"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="@id/infoDate"
-        app:layout_constraintTop_toBottomOf="@+id/recruitDriver2" />
+        />
 
     <TextView
         android:id="@+id/tripPerson"
-        style="@style/basic"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/recruitDriver2"
-        app:layout_constraintLeft_toLeftOf="@id/infoDate"
+
         android:layout_marginLeft="280dp"
         android:layout_marginTop="20dp"
         style="@style/basic"
         android:textStyle="bold"
         android:text="4명"
-        android:textStyle="bold"
+
         app:layout_constraintLeft_toLeftOf="@id/infoDate"
         app:layout_constraintTop_toBottomOf="@+id/recruitDriver2" />
 
