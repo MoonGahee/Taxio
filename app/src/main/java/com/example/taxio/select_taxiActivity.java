@@ -46,9 +46,21 @@ public class select_taxiActivity extends AppCompatActivity implements TimePicker
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
+        start_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                timePick(v);
+            }
+        });
     }
 
     public void timePick(View v){
+        TimePickerDialog d= new TimePickerDialog(getApplicationContext(), AlertDialog.THEME_HOLO_LIGHT, new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                startTime = hourOfDay+"시 "+minute+"분";
+            }
+        }, 0,0,false);
 
     }
 
