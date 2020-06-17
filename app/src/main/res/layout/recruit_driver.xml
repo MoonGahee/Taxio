@@ -15,10 +15,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         >
         <TextView
-<<<<<<<<< Temporary merge branch 1
-=========
 
->>>>>>>>> Temporary merge branch 2
             android:id="@+id/title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -117,14 +114,12 @@
         android:layout_marginTop="20dp"
 
         android:textStyle="bold"
-<<<<<<<<< Temporary merge branch 1
+
         android:text="2020년 8월 28일"
 
         />
-=========
-        android:text="2020년 8월 28일"/>
 
->>>>>>>>> Temporary merge branch 2
+
 
     <TextView
         android:id="@+id/tripPerson"
@@ -137,11 +132,9 @@
         android:layout_marginTop="20dp"
 
         android:textStyle="bold"
-<<<<<<<<< Temporary merge branch 1
+
         android:text="4명" />
-=========
-        android:text="4명"/>
->>>>>>>>> Temporary merge branch 2
+
 
     <RadioGroup
         android:id="@+id/rg1"
