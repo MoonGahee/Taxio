@@ -57,14 +57,16 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="출발일과 도착일을 선택해주세요"
         style="@style/title2"/>
-    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+    <CalendarView
         android:id="@+id/cal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/select"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:dateTextAppearance="@style/basic"/>
+        android:dateTextAppearance="@style/basic"
+
+        />
     <Button
         android:id="@+id/ok"
         android:layout_margin="20dp"
