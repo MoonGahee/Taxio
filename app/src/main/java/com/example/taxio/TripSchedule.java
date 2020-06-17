@@ -38,10 +38,15 @@ public class TripSchedule extends AppCompatActivity {
         RecyclerTripSchedule adapter = new RecyclerTripSchedule(list);
         recyclerView1.setAdapter(adapter);
 
-        adapter.addTrip("여행 날짜 : 20.05.22 ~ 20.05.24\n5월 22일 : 제주\n 공항 - 용문사 - 오설록 ...\n\n(홍길동 기사님)\n5월 23일 : 신라호텔 우도선착장 - 애월...");
-        adapter.addTrip("여행 날짜 : 20.05.23 ~ 20.05.24\n5월 23일 : 제주\n 공항 - 용문사 - 오설록 ...\n\n(홍길동 기사님)\n5월 23일 : 신라호텔 우도선착장 - 애월...");
+        //임시 데이터 값
+        adapter.addTrip("여행 날짜 : 20.05.22 ~ 20.05.24\n5월 22일 : 제주\n 공항 - 용문사 - 오설록 ...\n" +
+                "\n(홍길동 기사님)\n5월 23일 : 신라호텔 우도선착장 - 애월...");
+        adapter.addTrip("여행 날짜 : 20.05.23 ~ 20.05.24\n5월 23일 : 제주\n 공항 - 용문사 - 오설록 ...\n" +
+                "\n(홍길동 기사님)\n5월 23일 : 신라호텔 우도선착장 - 애월...");
+
         adapter.addDetail("모집 중");
         adapter.addDetail("여행 중");
+
         adapter.notifyDataSetChanged();
     }
 
