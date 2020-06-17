@@ -35,9 +35,10 @@ public class TripScheduleDetail extends AppCompatActivity {
 
         detailOk.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //확인 버튼 클릭시 이벤트 처리
                 Intent intent = new Intent(TripScheduleDetail.this, TripSchedule.class);
                 startActivity(intent);
+                finish();
             }
         });
 
