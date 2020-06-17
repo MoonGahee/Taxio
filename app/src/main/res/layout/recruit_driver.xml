@@ -8,18 +8,21 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/abar"
-        style="@style/back"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         >
         <TextView
-            style="@style/title"
+<<<<<<<<< Temporary merge branch 1
+=========
+
+>>>>>>>>> Temporary merge branch 2
             android:id="@+id/title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-         />
+            style="@style/title"/>
     </androidx.appcompat.widget.Toolbar> <!-- 툴바 -->
 
     <TextView
@@ -45,13 +48,12 @@
 
     <TextView
         android:id="@+id/infoDate"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/recruitDriver2"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="20dp"
-        style="@style/basic"
+
         android:text="날짜"
         />
 
@@ -64,7 +66,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="250dp"
-        style="@style/basic"
+
         android:text="인원"
         />
 
@@ -82,7 +84,7 @@
 
     <TextView
         android:id="@+id/infoTrunk"
-        style="@style/basic"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/infoGender"
@@ -115,23 +117,31 @@
         android:layout_marginTop="20dp"
 
         android:textStyle="bold"
+<<<<<<<<< Temporary merge branch 1
         android:text="2020년 8월 28일"
+
         />
+=========
+        android:text="2020년 8월 28일"/>
+
+>>>>>>>>> Temporary merge branch 2
 
     <TextView
         android:id="@+id/tripPerson"
-
+        style="@style/basic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        app:layout_constraintTop_toBottomOf="@+id/recruitDriver2"
+        app:layout_constraintLeft_toLeftOf="@id/infoDate"
         android:layout_marginLeft="280dp"
         android:layout_marginTop="20dp"
-        style="@style/basic"
-        android:textStyle="bold"
-        android:text="4명"
 
-        app:layout_constraintLeft_toLeftOf="@id/infoDate"
-        app:layout_constraintTop_toBottomOf="@+id/recruitDriver2" />
+        android:textStyle="bold"
+<<<<<<<<< Temporary merge branch 1
+        android:text="4명" />
+=========
+        android:text="4명"/>
+>>>>>>>>> Temporary merge branch 2
 
     <RadioGroup
         android:id="@+id/rg1"
@@ -255,6 +265,7 @@
         app:layout_constraintTop_toBottomOf="@+id/search_btn" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_driver"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         app:layout_constraintLeft_toLeftOf="parent"
