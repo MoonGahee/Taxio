@@ -35,17 +35,13 @@ public class TripScheduleDetail extends AppCompatActivity {
 
         detailOk.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //확인 버튼 클릭시 이벤트 처리
                 Intent intent = new Intent(TripScheduleDetail.this, TripSchedule.class);
                 startActivity(intent);
+                finish();
             }
         });
 
-        toolbar = (Toolbar)findViewById(R.id.abar); // 툴바를 액티비티의 앱바로 지정
-        setSupportActionBar(toolbar); //툴바를 현재 액션바로 설정
-        ActionBar actionBar = getSupportActionBar(); //현재 액션바를 가져옴
-        actionBar.setDisplayShowTitleEnabled(false); //액션바의 타이틀 삭제
-        actionBar.setDisplayHomeAsUpEnabled(true); //홈으로 가기 버튼 활성화
 
         title_text = findViewById(R.id.title_text);
         title_text.setClickable(true);

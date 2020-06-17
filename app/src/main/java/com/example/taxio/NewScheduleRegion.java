@@ -47,6 +47,7 @@ public class NewScheduleRegion extends AppCompatActivity {
 
                     }
                 });
+                builder.show();
             }
         });
 
