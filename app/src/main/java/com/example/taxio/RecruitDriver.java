@@ -71,7 +71,7 @@ public class RecruitDriver extends AppCompatActivity {
 
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //조회 누르면 밑에 리사이클러뷰가 뜸
             }
         });
 

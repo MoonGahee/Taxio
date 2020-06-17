@@ -14,15 +14,17 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class TripSchedule extends AppCompatActivity {
-
+    private RecyclerTripSchedule adapter;
     TextView title_text;
     Toolbar toolbar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        //AppBar
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.abar); // 툴바를 액티비티의 앱바로 지정
@@ -30,24 +32,38 @@ public class TripSchedule extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar(); //현재 액션바를 가져옴
         actionBar.setDisplayShowTitleEnabled(false); //액션바의 타이틀 삭제
         actionBar.setDisplayHomeAsUpEnabled(true); //홈으로 가기 버튼 활성화
+        // AppBar
 
-        ArrayList<String> list = new ArrayList<>();
-        RecyclerView recyclerView1 = findViewById(R.id.tripRecycler);
-        recyclerView1.setLayoutManager(new LinearLayoutManager(this));
+        init();
 
-        RecyclerTripSchedule adapter = new RecyclerTripSchedule(list);
-        recyclerView1.setAdapter(adapter);
+        getData();
+    }
 
-        //임시 데이터 값
-        adapter.addTrip("여행 날짜 : 20.05.22 ~ 20.05.24\n5월 22일 : 제주\n 공항 - 용문사 - 오설록 ...\n" +
-                "\n(홍길동 기사님)\n5월 23일 : 신라호텔 우도선착장 - 애월...");
-        adapter.addTrip("여행 날짜 : 20.05.23 ~ 20.05.24\n5월 23일 : 제주\n 공항 - 용문사 - 오설록 ...\n" +
-                "\n(홍길동 기사님)\n5월 23일 : 신라호텔 우도선착장 - 애월...");
+    public void init() {
+        RecyclerView tripRecycler = findViewById(R.id.tripRecycler);
 
-        adapter.addDetail("모집 중");
-        adapter.addDetail("여행 중");
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        tripRecycler.setLayoutManager(linearLayoutManager);
+
+        adapter = new RecyclerTripSchedule();
+        tripRecycler.setAdapter(adapter);
+    }
+
+    private void getData() { //임시 데이터
+        List<String> listTripSchedule = Arrays.asList("test1", "test2", "test3");
+
+        List<String> listTripPosition = Arrays.asList("여행중", "모집 중", "여행 준비");
+
+        for (int i = 0; i < listTripSchedule.size(); i++) {
+            TripData data = new TripData();
+            data.setTripSchedule(listTripSchedule.get(i));
+            data.setTripPosition(listTripPosition.get(i));
+
+            adapter.addItem(data);
+        }
 
         adapter.notifyDataSetChanged();
+
     }
 
     public void goMain(ImageView logo) {//로고버튼 클릭시
