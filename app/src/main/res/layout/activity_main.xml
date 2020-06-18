@@ -108,6 +108,15 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:layout_constraintTop_toBottomOf="@id/weather"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/scrl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/comingTrip"
         android:layout_width="match_parent"
@@ -144,13 +153,14 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/newTripBtn"
         android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/comingTrip"
+        app:layout_constraintTop_toBottomOf="@+id/scrl1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:background="@drawable/button_long"
@@ -175,6 +185,16 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="총 3건의 요청이 있습니다."
         style="@style/title2"/>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:layout_constraintTop_toBottomOf="@id/recruitCount"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/scrl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/recruitList1"
@@ -209,7 +229,7 @@
         app:layout_constraintLeft_toLeftOf="@id/recruitList1"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/recruitList2"
@@ -277,8 +297,7 @@
             android:layout_marginTop="5dp"
             app:layout_constraintTop_toBottomOf="@id/recruit3"
             app:layout_constraintLeft_toLeftOf="@id/recruitList3"/>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

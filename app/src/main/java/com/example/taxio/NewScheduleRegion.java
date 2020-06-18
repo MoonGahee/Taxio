@@ -37,7 +37,7 @@ public class NewScheduleRegion extends AppCompatActivity {
                 builder.setPositiveButton("네", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(NewScheduleRegion.this, TripSchedule.class);
+                        Intent intent = new Intent(NewScheduleRegion.this, select_scheduleActivity.class);
                         startActivity(intent);
                     }
                 });
