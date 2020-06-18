@@ -1,6 +1,7 @@
 package com.example.taxio;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,16 @@ public class RecyclerTripSchedule extends RecyclerView.Adapter<RecyclerTripSched
 
             tripSchedule = itemView.findViewById(R.id.tripSchedule);
             tripPosition = itemView.findViewById(R.id.tripPosition);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    Intent intent = new Intent(v.getContext(), TripScheduleDetail.class);
+                    //데이터 데려와야하나..?
+                    v.getContext().startActivity(intent);
+                }
+            });
         }
 
         void onBind(TripData dataT) { //data setting

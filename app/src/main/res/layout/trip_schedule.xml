@@ -14,13 +14,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/title_text"
             style="@style/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-            android:id="@+id/title_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/title"/>
 
     </androidx.appcompat.widget.Toolbar> <!-- 툴바 -->
 
@@ -47,7 +44,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recruitDriver2" />
+        app:layout_constraintTop_toBottomOf="@+id/recruitDriver2"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
