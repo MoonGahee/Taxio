@@ -42,16 +42,7 @@ public class NewScheduleRegion extends AppCompatActivity {
         });
     }
 
-    public void goMain(ImageView logo){//로고버튼 클릭시
-        logo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(NewScheduleRegion.this, MainActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
-    }
+
 
     public boolean onOptionsItemSelected(MenuItem item) {//toolbar의 back키 눌렀을 시
         switch (item.getItemId()){
