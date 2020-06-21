@@ -150,7 +150,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="25dp"
-            android:text="무관" />
+            android:text="무관"
+            />
 
         <RadioButton
             android:id="@+id/manDriver"
