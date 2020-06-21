@@ -74,9 +74,6 @@ public class RecruitDriver extends AppCompatActivity {
             public void onClick(View v) { //조회 누르면 밑에 리사이클러뷰가 뜸
             }
         });
-
-        //RadioButton 활용
-
         //RecyclerView 사용
         init();
         getData();
