@@ -26,25 +26,23 @@ public class TripSchedule extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         //AppBar
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        toolbar = (Toolbar) findViewById(R.id.abar); // 툴바를 액티비티의 앱바로 지정
+        setContentView(R.layout.trip_schedule);
+
+        toolbar = (Toolbar) findViewById(R.id.appbar); // 툴바를 액티비티의 앱바로 지정
         setSupportActionBar(toolbar); //툴바를 현재 액션바로 설정
         ActionBar actionBar = getSupportActionBar(); //현재 액션바를 가져옴
-        actionBar.setDisplayShowTitleEnabled(false); //액션바의 타이틀 삭제
-        actionBar.setDisplayHomeAsUpEnabled(true); //홈으로 가기 버튼 활성화
+        //actionBar.setDisplayShowTitleEnabled(false); //액션바의 타이틀 삭제
+        //actionBar.setDisplayHomeAsUpEnabled(true); //홈으로 가기 버튼 활성화에서 왜 null에러?
         // AppBar
-
         init();
-
         getData();
+
     }
 
-    public void init() {
+    public void init() { //리사이클러뷰 출력
         RecyclerView tripRecycler = findViewById(R.id.tripRecycler);
-
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         tripRecycler.setLayoutManager(linearLayoutManager);
-
         adapter = new RecyclerTripSchedule();
         tripRecycler.setAdapter(adapter);
     }

@@ -10,6 +10,7 @@
         style="@style/basic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Title"
         />
 
     <TextView
@@ -20,5 +21,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:textColor="#FF2F2F"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:text="position"/>
 </RelativeLayout>
