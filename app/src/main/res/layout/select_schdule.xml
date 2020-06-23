@@ -88,6 +88,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:dateTextAppearance="@style/basic"
         android:background="@color/trip"
+        android:layout_marginTop="10dp"
         />
     <Button
         android:id="@+id/ok"

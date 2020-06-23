@@ -6,4 +6,5 @@
 <color name="taxi">#FF682F</color>
 <color name="trip">#37BEB3</color>
 <color name="tButton">#8537BEB3</color>
+    <color name="send">#F0EBD8</color>
 </resources>
