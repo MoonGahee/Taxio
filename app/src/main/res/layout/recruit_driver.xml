@@ -264,7 +264,8 @@
         android:layout_marginTop="10dp"
         android:text="총 1분의 기사님이 기다리고 계십니다."
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/search_btn"
+        android:visibility="invisible"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_driver"
@@ -273,6 +274,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/search_result"
         android:layout_marginBottom="20dp"
-        android:background="@color/tButton"/>
+        android:background="@color/tButton"
+        android:visibility="invisible"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,8 +27,9 @@ public class RecruitDriver extends AppCompatActivity {
     RadioGroup rg1, rg2, rg3;
     RadioButton noGender, manDriver, womanDriver, allTrunk, yesTrunk, noTrunk, under4, under6, over6;
     Button searchBtn;
-    TextView title_text;
+    TextView title_text, search_result;
     Toolbar toolbar;
+    RecyclerView recyclerView_driver;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -64,6 +65,8 @@ public class RecruitDriver extends AppCompatActivity {
         under6 = findViewById(R.id.under6);
         over6 = findViewById(R.id.over6);
         searchBtn = findViewById(R.id.search_btn);
+        search_result = findViewById(R.id.search_result);
+        recyclerView_driver = findViewById(R.id.recyclerView_driver);
 
         rg1 = findViewById(R.id.rg1);
         rg2 = findViewById(R.id.rg2);
@@ -72,6 +75,9 @@ public class RecruitDriver extends AppCompatActivity {
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { //조회 누르면 밑에 리사이클러뷰가 뜸
+                search_result.setVisibility(View.VISIBLE);
+                recyclerView_driver.setVisibility(View.VISIBLE);
+
             }
         });
         //RecyclerView 사용
@@ -109,19 +115,6 @@ public class RecruitDriver extends AppCompatActivity {
         }
 
         adapter.notifyDataSetChanged(); //adapter값이 변경되었음
-    }
-
-
-    // 툴바 버튼 클릭 이벤트
-    public void goMain(ImageView logo){//로고버튼 클릭시
-        logo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(RecruitDriver.this, MainActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {//toolbar의 back키 눌렀을 시
