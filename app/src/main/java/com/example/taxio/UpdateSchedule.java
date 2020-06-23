@@ -46,7 +46,7 @@ public class UpdateSchedule extends AppCompatActivity implements TimelineObjectC
         actionBar.setDisplayShowTitleEnabled(false); //액션바의 타이틀 삭제
         actionBar.setDisplayHomeAsUpEnabled(true); //홈으로 가기 버튼 활성화
 
-        AutoCompleteTextView search = findViewById(R.id.search1);
+        AutoCompleteTextView search = findViewById(R.id.search2);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item,jeju);
         search.setAdapter(adapter);
 

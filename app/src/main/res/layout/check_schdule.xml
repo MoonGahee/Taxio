@@ -2,12 +2,14 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        xmlns:map="http://schemas.android.com/apk/res-auto">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/abar"
@@ -104,16 +106,6 @@
             android:layout_marginTop="20dp"
             style="@style/title2"/>
 
-        <Button
-            android:id="@+id/recommend1"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:layout_constraintTop_toBottomOf="@+id/map1"
-            app:layout_constraintLeft_toRightOf="@+id/day1"
-            android:text="추천"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/tButton"/>
 
         <!--<Button
             android:id="@+id/next1"
@@ -159,7 +151,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/map1"
-            app:layout_constraintLeft_toRightOf="@+id/recommend1"
+            app:layout_constraintLeft_toRightOf="@+id/day1"
             android:layout_margin="10dp"
             android:text="일정 완료"/>
 
