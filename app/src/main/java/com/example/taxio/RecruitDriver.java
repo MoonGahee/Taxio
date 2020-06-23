@@ -35,11 +35,11 @@ public class RecruitDriver extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recruit_driver);
 
-        toolbar = (Toolbar)findViewById(R.id.abar); // 툴바를 액티비티의 앱바로 지정
+        toolbar = (Toolbar)findViewById(R.id.appbar); // 툴바를 액티비티의 앱바로 지정
         setSupportActionBar(toolbar); //툴바를 현재 액션바로 설정
         ActionBar actionBar = getSupportActionBar(); //현재 액션바를 가져옴
-        actionBar.setDisplayShowTitleEnabled(false); //액션바의 타이틀 삭제
-        actionBar.setDisplayHomeAsUpEnabled(true); //홈으로 가기 버튼 활성화
+        //actionBar.setDisplayShowTitleEnabled(false); //액션바의 타이틀 삭제 ?? 왜 이걸 지우래?
+        //actionBar.setDisplayHomeAsUpEnabled(true); //홈으로 가기 버튼 활성화 ??왜 이걸 지워?
 
         title_text = findViewById(R.id.title_text);
         title_text.setClickable(true);
@@ -74,9 +74,6 @@ public class RecruitDriver extends AppCompatActivity {
             public void onClick(View v) { //조회 누르면 밑에 리사이클러뷰가 뜸
             }
         });
-
-        //RadioButton 활용
-
         //RecyclerView 사용
         init();
         getData();
@@ -93,13 +90,13 @@ public class RecruitDriver extends AppCompatActivity {
     }
 
     public void getData(){ //임시 데이터값 추가
-        List<String> listDriverName = Arrays.asList("1", "2", "3");
+        List<String> listDriverName = Arrays.asList("1", "2", "3","1", "2", "3");
 
-        List<String> listDriverInfo = Arrays.asList("ㄱ", "ㄴ", "ㄷ");
+        List<String> listDriverInfo = Arrays.asList("ㄱ", "ㄴ", "ㄷ","1", "2", "3");
 
-        List<String> listDriverPrice = Arrays.asList("가", "나", "다");
+        List<String> listDriverPrice = Arrays.asList("가", "나", "다","1", "2", "3");
 
-        List<Integer> listDriverPhoto = Arrays.asList(R.drawable.taxi, R.drawable.taxi, R.drawable.taxi);
+        List<Integer> listDriverPhoto = Arrays.asList(R.drawable.taxi, R.drawable.taxi, R.drawable.taxi,R.drawable.taxi, R.drawable.taxi, R.drawable.taxi);
 
         for(int i = 0; i < listDriverName.size(); i++){  //DriverData Class 객체에 set
             DriverData data = new DriverData();

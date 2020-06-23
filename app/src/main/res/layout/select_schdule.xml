@@ -64,7 +64,9 @@
         app:layout_constraintTop_toBottomOf="@+id/select"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:dateTextAppearance="@style/basic"/>
+        android:dateTextAppearance="@style/basic"
+
+        />
     <Button
         android:id="@+id/ok"
         android:layout_margin="20dp"
