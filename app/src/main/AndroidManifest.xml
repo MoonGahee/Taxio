@@ -47,6 +47,7 @@
         <activity android:name=".FindSchedule_Activity"/>
         <activity android:name=".select_scheduleActivity"/>
         <activity android:name=".select_taxiActivity"/>
+        <activity android:name=".CompleteReservation"/>
     </application>
 
 </manifest>

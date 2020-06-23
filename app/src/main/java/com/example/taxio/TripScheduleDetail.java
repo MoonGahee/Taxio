@@ -49,7 +49,7 @@ public class TripScheduleDetail extends AppCompatActivity {
         title_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(TripScheduleDetail.this, MainActivity.class);
+                Intent i = new Intent(TripScheduleDetail.this, TripSchedule.class);
                 startActivity(i);
                 finish();
             }

@@ -1,5 +1,10 @@
 package com.example.taxio;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +19,7 @@ import java.util.ArrayList;
 public class RecyclerRecruitDriver extends RecyclerView.Adapter<RecyclerRecruitDriver.ItemViewHolder>{
     // 주석 체크만 한 경우 ViewHolder > itemViewHolder로 변경함
     private ArrayList<DriverData> dData = new ArrayList<>();
+    Context context;
 
     public class ItemViewHolder extends RecyclerView.ViewHolder{ //
         TextView driverName;
@@ -47,14 +53,45 @@ public class RecyclerRecruitDriver extends RecyclerView.Adapter<RecyclerRecruitD
 
     @NonNull
     @Override //view를 인플레이터함
-    public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) { //
+    public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recruit_driver_recycler, parent, false);
+        context = parent.getContext();
         return new ItemViewHolder(view);
     }
 
     @Override // position에 맞추어 각 항목을 구성하기 위해서 호출함
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) { //
         holder.onBind(dData.get(position));
+
+        holder.recruit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("기사 요청");
+                builder.setMessage("아이린 기사님에게 요청하시겠습니까?\n금액은 60,000원입니다.");
+                builder.setPositiveButton("예", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent i = new Intent(context ,CompleteReservation.class);
+                        context.startActivity(i);
+                    }
+                });
+                builder.setNegativeButton("아니오", null);
+                builder.show();
+            }
+        });
+
+        holder.sendMsg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("문자 전송");
+                builder.setMessage("아이린 기사님에게 문자를 \n전송하시겠습니까?");
+                builder.setPositiveButton("예", null);
+                builder.setNegativeButton("아니오", null);
+                builder.show();
+            }
+        });
     }
 
     @Override
