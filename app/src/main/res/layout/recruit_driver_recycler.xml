@@ -4,7 +4,9 @@
     android:layout_height="wrap_content"
     android:background="#FFFFFF"
     android:padding="10dp">
-
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/driverImg"
         android:layout_width="70dp"
@@ -33,6 +35,7 @@
         android:textColor="#8E8C93" />
 
     <ImageView
+        android:id="@+id/plusBtn"
         android:layout_width="18dp"
         android:layout_height="18dp"
         android:layout_alignParentRight="true"
@@ -73,5 +76,7 @@
         android:layout_toRightOf="@+id/infoDriver"
         android:text="가격 : 60000원"
         android:textStyle="bold" />
+</RelativeLayout> <!--Expandable Recycler용-->
+
 
 </RelativeLayout>

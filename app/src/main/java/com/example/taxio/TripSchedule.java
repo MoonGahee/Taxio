@@ -48,7 +48,7 @@ public class TripSchedule extends AppCompatActivity {
     }
 
     private void getData() { //임시 데이터
-        List<String> listTripSchedule = Arrays.asList("test1", "test2", "test3");
+        List<String> listTripSchedule = Arrays.asList("여행 날짜 : 20.05.22 ~ 20.05.24\n5월 22일 : 제주공항 - 용문사 - 오설록 - 신라호텔", "여행 날짜 : 20.05.22 ~ 20.05.24\n5월 22일 : 제주공항 - 용문사 - 오설록 - 신라호텔", "여행 날짜 : 20.05.22 ~ 20.05.24\n5월 22일 : 제주공항 - 용문사 - 오설록 - 신라호텔");
 
         List<String> listTripPosition = Arrays.asList("여행중", "모집 중", "여행 준비");
 

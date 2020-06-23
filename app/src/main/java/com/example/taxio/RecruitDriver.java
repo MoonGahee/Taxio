@@ -96,11 +96,11 @@ public class RecruitDriver extends AppCompatActivity {
     }
 
     public void getData(){ //임시 데이터값 추가
-        List<String> listDriverName = Arrays.asList("1", "2", "3","1", "2", "3");
+        List<String> listDriverName = Arrays.asList("아이린", "이지은", "박보검","이민호", "아이유", "예린");
 
-        List<String> listDriverInfo = Arrays.asList("ㄱ", "ㄴ", "ㄷ","1", "2", "3");
+        List<String> listDriverInfo = Arrays.asList("성별 : 여 \n트렁크 : 유 \n4인승", "성별 : 남 \n트렁크 : 무 \n6인승", "성별 : 남 \n트렁크 : 유 \n4인승","성별 : 여 \n트렁크 : 유 \n4인승", "성별 : 여 \n트렁크 : 유 \n4인승", "성별 : 여 \n트렁크 : 유 \n4인승");
 
-        List<String> listDriverPrice = Arrays.asList("가", "나", "다","1", "2", "3");
+        List<String> listDriverPrice = Arrays.asList("가격 : 60,000원", "가격 : 60,000원", "가격 : 40,000원","가격 : 50,000원", "가격 : 60,000원", "가격 : 60,000원");
 
         List<Integer> listDriverPhoto = Arrays.asList(R.drawable.taxi, R.drawable.taxi, R.drawable.taxi,R.drawable.taxi, R.drawable.taxi, R.drawable.taxi);
 
