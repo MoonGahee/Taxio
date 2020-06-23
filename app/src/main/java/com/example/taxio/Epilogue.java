@@ -95,17 +95,6 @@ public class Epilogue extends AppCompatActivity {
         });
     }
 
-    public void goMain(ImageView logo){//로고버튼 클릭시
-        logo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Epilogue.this, MainActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
-    }
-
     public boolean onOptionsItemSelected(MenuItem item) {//toolbar의 back키 눌렀을 시
         switch (item.getItemId()){
             case android.R.id.home:{//이전 화면으로 돌아감

@@ -14,15 +14,21 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentTransaction;
 
-import com.github.vipulasri.timelineview.TimelineView;
+import com.akshaykale.swipetimeline.TimelineFragment;
+import com.akshaykale.swipetimeline.TimelineGroupType;
+import com.akshaykale.swipetimeline.TimelineObject;
+import com.akshaykale.swipetimeline.TimelineObjectClickListener;
 
-public class UpdateSchedule extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class UpdateSchedule extends AppCompatActivity implements TimelineObjectClickListener {
 
     Button finish_btn;
     Toolbar toolbar;
-    TimelineView trip2;
     TextView title_text;
+    TimelineFragment mFragment = new TimelineFragment();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,13 +36,22 @@ public class UpdateSchedule extends AppCompatActivity {
         setContentView(R.layout.update_schedule);
 
         finish_btn = findViewById(R.id.update_finish2);
-        trip2 = findViewById(R.id.trip2);
 
         toolbar = (Toolbar)findViewById(R.id.abar); // 툴바를 액티비티의 앱바로 지정
         setSupportActionBar(toolbar); //툴바를 현재 액션바로 설정
         ActionBar actionBar = getSupportActionBar(); //현재 액션바를 가져옴
         actionBar.setDisplayShowTitleEnabled(false); //액션바의 타이틀 삭제
         actionBar.setDisplayHomeAsUpEnabled(true); //홈으로 가기 버튼 활성화
+
+        mFragment.setData(loadData(), TimelineGroupType.DAY);
+        mFragment.addOnClickListener(this);
+
+        mFragment.setTimelineHeaderSize(0);
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.add(R.id.trip2, mFragment);
+        transaction.replace(R.id.trip2, mFragment);
+        transaction.commit();
 
         title_text = findViewById(R.id.title_text);
         title_text.setClickable(true);
@@ -59,7 +74,7 @@ public class UpdateSchedule extends AppCompatActivity {
                 builder.setPositiveButton("네", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(UpdateSchedule.this, RecruitDriver.class);
+                        Intent intent = new Intent(UpdateSchedule.this, CheckSchedule.class);
                         startActivity(intent);
                     }
                 });
@@ -73,19 +88,6 @@ public class UpdateSchedule extends AppCompatActivity {
             }
         });
 
-        trip2.findViewById(R.id.trip2);
-        //trip2.initLine();
-    }
-
-    public void goMain(ImageView logo){//로고버튼 클릭시
-        logo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(UpdateSchedule.this, MainActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {//toolbar의 back키 눌렀을 시
@@ -96,5 +98,28 @@ public class UpdateSchedule extends AppCompatActivity {
             }
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private ArrayList<TimelineObject> loadData() {
+        ArrayList<TimelineObject> obj = new ArrayList<>();
+
+        obj.add(new TestO(Long.parseLong("1483196400000"), "제주공항", "url"));
+        obj.add(new TestO(Long.parseLong("1484146800000"), "용두암", "url"));
+        obj.add(new TestO(Long.parseLong("1485961200000"), "성산일출봉", "url"));
+        obj.add(new TestO(Long.parseLong("1487084400000"), "동문시장", "url"));
+        obj.add(new TestO(Long.parseLong("1489244400000"), "하얏트호텔", "url"));
+
+
+        return obj;
+    }
+
+    @Override
+    public void onTimelineObjectClicked(TimelineObject timelineObject) {
+
+    }
+
+    @Override
+    public void onTimelineObjectLongClicked(TimelineObject timelineObject) {
+
     }
 }
