@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.DatePicker;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,24 +27,29 @@ public class select_scheduleActivity extends AppCompatActivity {
     Calendar myCal;
     String date;
 
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.select_schdule);
         setToolbar();
 
         ok = findViewById(R.id.ok);
         cal = findViewById(R.id.cal);
         myCal = Calendar.getInstance();
+        int y = myCal.get(myCal.YEAR);
+        int m = myCal.get(myCal.MONTH);
+        int d = myCal.get(myCal.DAY_OF_MONTH);
 
 
 
-        cal.setMinDate(myCal.getTimeInMillis());//최소선택날은 오늘
+
+        //cal.setMinDate(myCal.getTimeInMillis());//최소선택날은 오늘
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder dlg = new AlertDialog.Builder(select_scheduleActivity.this);
                 dlg.setTitle("일정 확인");
-                dlg.setMessage(date+"가 선택한 일정이 맞습니까?");
+                dlg.setMessage(date+"이 선택한 일정이 맞습니까?");
                 dlg.setPositiveButton("예", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

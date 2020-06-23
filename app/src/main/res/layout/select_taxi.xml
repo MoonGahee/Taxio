@@ -13,7 +13,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         style="@style/back">
-
         <TextView
             android:id="@+id/title_text"
             android:layout_width="wrap_content"
@@ -60,7 +59,7 @@
         android:layout_marginRight="84dp"
         style="@style/basic"
         android:text="대여시간"
-/>
+        />
 
     <TextView
         android:id="@+id/start"
@@ -72,25 +71,28 @@
         android:layout_marginRight="68dp"
         style="@style/basic"
         android:text="출발시간"
- />
+        />
 
     <TextView
         android:id="@+id/taxi_day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rent"/>
+        app:layout_constraintTop_toBottomOf="@+id/rent"
+        android:text="6월 24일"
+        style="@style/basic"/>
 
     <Spinner
         android:id="@+id/rent_spin"
-        style="@style/basic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="124dp"
+        android:layout_marginLeft="12dp"
         android:layout_marginTop="16dp"
+        android:background="@color/trip"
         android:entries="@array/rent"
+        style="@style/attention"
         app:layout_constraintLeft_toRightOf="@+id/taxi_day"
-        app:layout_constraintTop_toBottomOf="@+id/rent" />//background -> 버튼 투명하게, stateListAnimation -> 그림자 없애기
+        app:layout_constraintTop_toBottomOf="@+id/rent" />
 
 
 

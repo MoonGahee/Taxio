@@ -1,5 +1,6 @@
 package com.example.taxio;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
@@ -15,26 +16,26 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class select_taxiActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
+public class select_taxiActivity extends AppCompatActivity  {
     Button start_btn, ok;
     Spinner rent_spin;
     TextView taxi_day;
-    String date;
     String time, startTime;
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.select_taxi);
         setToolbar();
-        Intent ii = getIntent();
-        date = ii.getStringExtra("date");
         start_btn = findViewById(R.id.start_btn);
         ok = findViewById(R.id.ok);
         rent_spin = findViewById(R.id.rent_spin);
         taxi_day = findViewById(R.id.taxi_day);
+        Intent intent = new Intent();
+        String date = intent.getStringExtra("date");
 
-        taxi_day.setText(date);
+
+
 
         rent_spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -52,15 +53,25 @@ public class select_taxiActivity extends AppCompatActivity implements TimePicker
                 timePick(v);
             }
         });
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(select_taxiActivity.this, FindSchedule_Activity.class);
+                startActivity(i);
+                finish();
+            }
+        });
     }
 
     public void timePick(View v){
-        TimePickerDialog d= new TimePickerDialog(getApplicationContext(), AlertDialog.THEME_HOLO_LIGHT, new TimePickerDialog.OnTimeSetListener() {
+        TimePickerDialog d= new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                 startTime = hourOfDay+"시 "+minute+"분";
             }
         }, 0,0,false);
+        d.setMessage("출발 시간");
+        d.show();
 
     }
 
@@ -72,10 +83,6 @@ public class select_taxiActivity extends AppCompatActivity implements TimePicker
         ActionBar actionBar = getSupportActionBar(); //현재 액션바를 가져옴
         actionBar.setDisplayShowTitleEnabled(false); //액션바의 타이틀 삭제
         actionBar.setDisplayHomeAsUpEnabled(true); //홈으로 가기 버튼 활성화
-    }
-
-    @Override
-    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
 
     }
 }

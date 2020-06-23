@@ -21,13 +21,13 @@
     </androidx.appcompat.widget.Toolbar><!-- 툴바 -->
 
     <TextView
-    android:id="@+id/Name"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/abar"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="일정 선택"
-    style="@style/title1"/>
+        android:id="@+id/Name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/abar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="일정 선택"
+        style="@style/title1"/>
     <TextView
         android:id="@+id/warn"
         android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
         android:text="한 번 만들어진 일정은 기간 변경이 불가능합니다."
         style="@style/attention"/>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/weather"
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -45,9 +45,31 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/warn"
-        android:background="@color/tButton">
+        android:background="@color/tButton"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘의 날씨"
+                style="@style/title1"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기온: 25도, 맑음"
+                style="@style/basic"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sunny"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>//날씨
+    </LinearLayout>//날씨
     <TextView
         android:id="@+id/select"
         android:layout_width="wrap_content"
@@ -65,7 +87,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:dateTextAppearance="@style/basic"
-
+        android:background="@color/trip"
         />
     <Button
         android:id="@+id/ok"

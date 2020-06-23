@@ -2,12 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.taxio">
 
-    <uses-permission android:name="android.permission.INTERNET">
-    </uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
-    </uses-permission>
+    <uses-feature
+        android:required="true"
+        android:glEsVersion="0x00020000"/>
+    <permission
+        android:name="com.example.taxio.permission.MAPS_RECEIVE"
+        android:label="signiture"/>
 
-    <meta-data android:name="com.kakao.sdk.AppKey" android:value="5f58a6e44d7a4245c5866a546a2103f9"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version"/>
 
     <application
         android:allowBackup="true"
@@ -16,6 +27,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCxD5xWigZ0ClE5SlD5CZE2pboKeX5VWwQ"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,6 +44,9 @@
         <activity android:name=".NewScheduleRegion" android:label="지역선택하기"/>
         <activity android:name=".CheckEpilogue"/>
         <activity android:name=".Epilogue"/>
+        <activity android:name=".FindSchedule_Activity"/>
+        <activity android:name=".select_scheduleActivity"/>
+        <activity android:name=".select_taxiActivity"/>
     </application>
 
 </manifest>

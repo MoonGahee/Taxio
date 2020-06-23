@@ -20,6 +20,8 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private Context context = this;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
