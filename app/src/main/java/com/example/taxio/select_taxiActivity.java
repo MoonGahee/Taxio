@@ -19,7 +19,7 @@ import androidx.appcompat.widget.Toolbar;
 public class select_taxiActivity extends AppCompatActivity  {
     Button start_btn, ok;
     Spinner rent_spin;
-    TextView taxi_day;
+    TextView taxi_day, title_text;
     String time, startTime;
 
 
@@ -34,7 +34,17 @@ public class select_taxiActivity extends AppCompatActivity  {
         Intent intent = new Intent();
         String date = intent.getStringExtra("date");
 
+        title_text = findViewById(R.id.title_text);
+        title_text.setClickable(true);
 
+        title_text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(select_taxiActivity.this, MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
 
         rent_spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

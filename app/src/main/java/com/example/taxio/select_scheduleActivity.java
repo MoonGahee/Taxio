@@ -3,6 +3,7 @@ package com.example.taxio;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
@@ -26,7 +27,7 @@ public class select_scheduleActivity extends AppCompatActivity {
     CalendarView cal;
     Calendar myCal;
     String date;
-
+    TextView title_text;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +41,19 @@ public class select_scheduleActivity extends AppCompatActivity {
         int m = myCal.get(myCal.MONTH);
         int d = myCal.get(myCal.DAY_OF_MONTH);
 
+        title_text = findViewById(R.id.title_text);
 
+        title_text = findViewById(R.id.title_text);
+        title_text.setClickable(true);
+
+        title_text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(select_scheduleActivity.this, MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
 
         //cal.setMinDate(myCal.getTimeInMillis());//최소선택날은 오늘
@@ -84,4 +97,13 @@ public class select_scheduleActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true); //홈으로 가기 버튼 활성화
     }
 
+    public boolean onOptionsItemSelected(MenuItem item) {//toolbar의 back키 눌렀을 시
+        switch (item.getItemId()){
+            case android.R.id.home:{//이전 화면으로 돌아감
+                finish();
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

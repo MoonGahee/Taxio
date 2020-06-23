@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,6 +31,7 @@ public class UpdateSchedule extends AppCompatActivity implements TimelineObjectC
     Toolbar toolbar;
     TextView title_text;
     TimelineFragment mFragment = new TimelineFragment();
+    String jeju[] = {"용두암", "용머리해안", "성산일출봉", "한라산"};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,6 +45,10 @@ public class UpdateSchedule extends AppCompatActivity implements TimelineObjectC
         ActionBar actionBar = getSupportActionBar(); //현재 액션바를 가져옴
         actionBar.setDisplayShowTitleEnabled(false); //액션바의 타이틀 삭제
         actionBar.setDisplayHomeAsUpEnabled(true); //홈으로 가기 버튼 활성화
+
+        AutoCompleteTextView search = findViewById(R.id.search1);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item,jeju);
+        search.setAdapter(adapter);
 
         mFragment.setData(loadData(), TimelineGroupType.DAY);
         mFragment.addOnClickListener(this);
