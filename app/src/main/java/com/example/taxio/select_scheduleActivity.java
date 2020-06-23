@@ -37,6 +37,9 @@ public class select_scheduleActivity extends AppCompatActivity {
         ok = findViewById(R.id.ok);
         cal = findViewById(R.id.cal);
         myCal = Calendar.getInstance();
+        int y = myCal.get(myCal.YEAR);
+        int m = myCal.get(myCal.MONTH);
+        int d = myCal.get(myCal.DAY_OF_MONTH);
 
         title_text = findViewById(R.id.title_text);
 
